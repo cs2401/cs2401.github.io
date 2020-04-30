@@ -6,3 +6,6 @@ This is a collection of files that make up my website, this website was created 
 
 To access this website use the link below, which will take you to the home page:
 https://cs2401.github.io/
+
+Author:
+Chintan Shah -- https://www.linkedin.com/in/chintan-shah-99810a17b/
