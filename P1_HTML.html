@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <style>
+        /* Used for the fading line above the paragraphs */
+        .fade-effect2 {
+            display:block;
+            border:none;
+            height:2px;
+            background: -webkit-gradient(radial, 1% 1%, 0, 50% 50%, 200, from(#5499C7), to(#EAFAF1));
+        }
+
+        /*used for image floats to the right of the paragraph */
+        #floatRight {
+            float: right;
+
+            padding-right: 15px;
+            padding-left: 20px;
+
+            width: 30%;
+        }
+
+        /*table properties for the table in paragraph 3 */
+        table {
+            width: 70%;
+            margin: auto;
+            height: 220px;
+        }
+        .no {
+            background-color: #EC7063;
+            border-bottom: solid;
+            border-top: solid;
+            border-width: 1px;
+        }
+        .yes {
+            background-color: #58D68D;
+            border-bottom: solid;
+            border-top: solid;
+            border-width: 1px;
+        }
+
+    </style>
+
+
+    <title> Project 1 </title>
+
+    <!--Includes Fonts used for the whole website-->
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lora:wght@700&family=Raleway:wght@500&display=swap" rel="stylesheet">
+
+    <!--Includes CSS File for styling at External Level-->
+    <link rel="stylesheet" type="text/css" href="Project1_Styling.css">
+
+    <!--Includes JavaScript Files for responsive, interactive elements-->
+    <script src="HTML_page.js"></script>
+    <script src="Help.js"></script>
+
+    <!--Includes the CSS library Bootstrap to help with structure (Styling done using personal CSS)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body style="background-color: #EAFAF1">
+
+    <!--Navbar at the top of the page-->
+    <ul id="navBar">
+        <li> <a href="HomePage.html"> Home </a> </li>
+        <li> <a id="currentPage" href="P1_HTML.Html"> HTML </a> </li>
+        <li> <a href="P2_CSS.HTML"> CSS </a> </li>
+        <li> <a href="P3_JavaScript.html"> JavaScript </a> </li>
+        <li> <a href="P4_Biography.html"> Author </a> </li>
+    </ul>
+
+    <div class="container" id="heading"> 
+
+        <header> HTML </header>
+
+    </div>
+
+
+    <div id="textParagraph">
+
+        <div>
+            <h5 style="text-align: left;"> History </h5>
+
+            <!--Gives the faded line on top off the paragraph-->
+            <span class="fade-effect2"></span>
+
+            <p>
+                <img src="Tim.jpg" alt="Sir Tim Berners-Lee" id="floatRight">
+                Hypertext Markup Language (HTML) is a structural programming language used for web design. HTML is the <i>"skeleton"</i> of a website, it is used to design the structure including which elements the website includes, how these elements are organised, and small styling details included. HTML was created by Sir Tim Berners-Lee in 1989 as an attempt to improve collaboration between physicists around the globe. Professor Lee had the idea to link the texts in files so that there could be cross reference between research papers, this meant while reading a research paper, you could quickly display part of another paper, this is also where the terminology "web" was introduced. As a result of this Sir Tim Berners-Lee had created the 
+                <a href="https://www.bbc.co.uk/bitesize/topics/zkcqn39/articles/z2nbgk7" class="bodyLink" target="_blank">
+                    World Wide Web
+                </a> 
+                which is widely used around the globe to this day.
+            </p>
+        </div>
+
+        <div>
+            <h5 style="text-align: left;"> Evolution </h5>
+
+            <span class="fade-effect2"></span>
+
+            <p>
+                Over time HTML has evolved as a language adding tags and usable elements every update. HTML1 was released in 1993 with the purpose of sharing information in a way that is readable and accessible via the web, elements included in HTML1 were very limited with
+                
+                <!--Each one of these completes a task on click (most on hover)-->
+                <a href="#" onmouseover="showLink();" onmouseout="hideLink();" onclick="clickLink()" class="example">
+                    hyperlinks
+                </a>(the reason for HTML's creation) ,
+
+                <a href="#" onmouseover="showList();" onmouseout="hideList();" onclick="clickList();" class="example">
+                    lists
+                </a>,
+
+                <a href="#" onmouseover="showParagraph();" onmouseout="hideParagraph();" onclick="clickParagraph();" class="example">
+                    paragraphs
+                </a>,
+
+                <a href="#" onmouseover="showHeading();" onmouseout="hideHeading();" onclick="clickHeading();" class="example">
+                    headings
+                </a>
+                etc. This fulfilled HTML's purpose as it was created for collaboration between scientist and these elements were very important to writing and reading research article. HTML1 was created with a specific purpose in mind and as a result did not have elements that were useful for the wider community, HTML2 added elements that users could implement to make their websites more creative and unique, elements included 
+                <a href="#" onclick="clickImage();" class="example">
+                    images
+                </a>,
+
+                <a href="#" onmouseover="showTable();" onmouseout="hideTable();" onclick="clickTable();" class="example">
+                    tables
+                </a>,
+
+                <a href="#" onclick="clickHead();" class="example">
+                head tag
+                </a>,
+
+                <a href="#" onmouseover="showBody();" onmouseout="hideBody();" onclick="clickBody();" class="example">
+                    body
+                </a>
+                etc. HTML3 was a further improved on the changing direction of HTML by adding more stylist structural elements for users to implement, these include 
+                <a href="#" onclick="clickDiv();" class="example">
+                    divs
+                </a>,
+
+                <a href="#" onclick="clickStyle();" class="example">
+                    style tag
+                </a>,
+
+                <a href="#" onclick="clickScript();" class="example">
+                    script tag
+                </a>
+                etc. HTML4 and HTML5 have added more elements to improve websites interactivity and structure introducing 
+                <a href="#" onmouseover="showSpan();" onmouseout="hideSpan();" onclick="clickSpan();" class="example">
+                    spans
+                </a>,
+
+                <a href="#" onclick="clickButton();" class="example">
+                    buttons
+                </a>,
+
+                <a href="#" onclick="clickTime();" class="example">
+                    time tag
+                </a>
+                etc. HTML is still evolving to adapt to the growing needs of web developers.
+            </p>
+
+            <h4 style="text-align: center;">Common Elements Not Included Above</h4>
+
+            <table>
+                <tr>
+                    <th></th> <th>HTML1</th> <th>HTML2</th> <th>HTML3</th> <th>HTML4</th> <th>HTML5</th>
+                </tr>
+                <tr>
+                    <th> b, i, ins </th> <td class="no"></td> <td class="yes"></td> <td class="yes"></td> <td class="yes"></td> <td class="yes"></td>
+                </tr>
+                <tr>
+                    <th> br </th> <td class="no"></td> <td class="yes"></td> <td class="yes"></td> <td class="yes"></td> <td class="yes"></td>
+                </tr>
+                <tr>
+                    <th> summary </th> <td class="no"></td> <td class="no"></td> <td class="no"></td> <td class="no"></td> <td class="yes"></td>
+                </tr>
+                <tr>
+                    <th> legend </th> <td class="no"></td> <td class="no"></td> <td class="no"></td> <td class="yes"></td> <td class="yes"></td>
+                </tr>
+                <tr>
+                    <th> header </th> <td class="no"></td> <td class="no"></td> <td class="no"></td> <td class="no"></td> <td class="yes"></td>
+                </tr>
+                <tr>
+                    <th> title </th> <td class="yes"></td> <td class="yes"></td> <td class="yes"></td> <td class="yes"></td> <td class="yes"></td>
+                </tr>
+                <tr>
+                    <th> source </th> <td class="no"></td> <td class="no"></td> <td class="no"></td> <td class="no"></td> <td class="yes"></td>
+                </tr>
+
+
+            </table>
+
+
+        </div> 
+
+
+        <div>
+            <h5 style="text-align: left;"> Purpose </h5>
+
+            <span class="fade-effect2"></span>
+
+            <p>
+                HTML is a powerful language that can do so many things when it comes to web design, but its 
+                true purpose and what is built for is to ensure that a website has the correct elements on 
+                it and that these elements are organised correctly.
+            </p>
+
+            <h5> Importance of HTML Tasks</h5>
+
+            <!--Ordered list of the responsibilities-->
+            <ol>
+                <li> Content </li>
+                <li> Structure </li>
+                <li> Style </li>
+                <li> Functionality </li>
+            </ol>
+        </div>
+
+
+    </div>
+
+
+    <!--Text Box to be filled from the JS code-->
+    <p id="boxInactive" onclick="bodyClick();"></p>
+    
+    <!--Buttons for next and previous-->
+    <div id="Buttons">
+        
+        <a id="Previous" href="HomePage.html"> &#8249; </a>
+
+        <a id="Next" href="P2_CSS.html"> &#8250; </a>
+    
+    </div>
+
+    <div id="helpButton">
+        <a href="#" onclick="helpHTML();"> Help ?</a>
+    </div>
+
+    <p id="helpInactive" onclick="helpClick();"></p>
+
+</body>
+
+
+</html>

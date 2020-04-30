@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <style>
+        #floatLeft {
+            float: left;
+
+            padding-right: 40px;
+            padding-left: 0px;
+
+            width: 35%;
+        }
+        
+        .logo {
+            height: 50px;
+        }
+    
+        #logos a {
+            padding: 10px 15px 10px 15px;
+        }
+
+        #textParagraph a {
+            text-decoration: none;
+        }
+
+        #logos {
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+    </style>
+
+    <meta charset="utf-8"/>
+
+    <title> Project 1 </title>
+
+    <!--Includes Fonts used for the whole website-->
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lora:wght@700&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    
+    <!--Includes CSS File for styling at External Level-->
+    <link rel="stylesheet" type="text/css" href="Project1_Styling.css">
+
+    <!--Includes JavaScript File for responsive, interactive elements-->
+    <script src="Help.js"></script>
+
+    <!--Includes the CSS library Bootstrap to help with structure (Styling done using personal CSS)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body style="background-color: #FDEDEC">
+
+
+    <ul id="navBar">
+        <li> <a href="HomePage.html"> Home </a> </li>
+        <li> <a href="P1_HTML.Html"> HTML </a> </li>
+        <li> <a href="P2_CSS.HTML"> CSS </a> </li>
+        <li> <a href="P3_JavaScript.html"> JavaScript </a> </li>
+        <li> <a id="currentPage" href="P4_Biography.html"> Author </a> </li>
+    </ul>
+
+    <div class="container" id="heading"> 
+
+        <header> Author </header>
+
+    </div>
+
+    <div id="textParagraph" style="width: 850px;">
+
+        <div>
+            <p>
+                <img src="Chintan.jpg" alt="Chintan Shah" id="floatLeft">
+                Hello! Thank you for visiting this website, I hope you enjoyed it and learnt something new. I'm the author of this website Chintan Shah. I am currently completing my Bachelor of Science majoring in Data Science and Software Engineering at the University of Western Australia. Born in Mumbai, India. I grew up in Australia starting and completing my education in Perth at Carine Senior High School. Starting my tertiary education I had no previous experience in programming or in any technological field, but after commencing university study I have really come to enjoy programming and developed a keen interest in understanding technology and software in detail. As I have progressed through university studies I have grown more interested in the
+                <a href="https://www.mastersindatascience.org/resources/what-is-data-analytics/"> 
+                    Data Analytics
+                </a> 
+                field, with the processing of mass amounts of data and the conclusions that can be drawn from these large datasets. This has been my first attempt at creating a website and I hope you have enjoyed it.
+            </p>
+            
+        </div>
+
+        
+        <div id="logos">
+            
+            <a href="mailto:22497366@student.uwa.edu.au" target="_top">
+                <img src="outlook.png" alt="Student Email" class="logo" title="Student Email"> 
+            </a>
+        
+            <a href="Resume.pdf" target="_blank"> 
+                <img src="resume.png" alt="Resume" class="logo" title="Resume"> 
+            </a>
+            
+            <a href="https://www.linkedin.com/in/chintan-shah-99810a17b/" target="_blank"> 
+                <img src="linkedin.png" alt="Linkedin" class="logo" title="Linkedin"> 
+            </a>
+        
+        </div>
+
+    </div>
+
+
+    
+    <div id="Buttons">
+        <a id="Previous" href="P3_JavaScript.html"> &#8249; </a>
+    </div>
+
+    <div id="helpButton">
+        <a href="#" onclick="helpAuthor();"> Help ?</a>
+    </div>
+
+    <p id="helpInactive" onclick="helpClick();"></p>
+</body>
+
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <style>
+        /* Used for the fading line above the paragraphs */
+        .fade-effect2 {
+            display:block;
+            border:none;
+            height:2px;
+            background: -webkit-gradient(radial, 1% 1%, 0, 50% 50%, 200, from(#5499C7), to(#F4ECF7));
+        }
+
+        /*floats the image used in the firstparagraph to the right (resizes)*/
+        #floatRight {
+            float: right;
+
+            padding-right: 0px;
+            padding-left: 40px;
+
+            width: 35%;
+        }
+
+        /*makes the covid19 data invisible till needed (changed by js function)*/
+        #covid {
+            visibility: hidden;
+        }
+
+        /*formats the table used for the data */
+        table {
+            width: 50%;
+        }
+
+        .dataAdded td {
+            border-bottom: solid;
+            border-top: solid;
+            border-width: 1px;
+            padding: 5px 5px 5px 5px;
+        }
+
+        /*changes the color for every odd and even row*/
+        .dataAdded tr:nth-child(odd) {
+            background-color: #D4EFDF;
+        }
+        .dataAdded tr:nth-child(even) {
+            background-color: #FCF3CF;
+        }
+
+        /* formats the form box */
+        #form {
+            position: relative;
+            bottom: 10px;
+            margin: auto;
+            width: 645px;
+            background-color: #85C1E9 ;
+            padding: 20px 20px 50px 20px;
+        }
+    </style>
+
+    <title> Project 1 </title>
+
+    <!--Includes Fonts used for the whole website-->
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lora:wght@700&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    
+    <!--Includes CSS File for styling at External Level-->
+    <link rel="stylesheet" type="text/css" href="Project1_Styling.css">
+
+    <!--Includes JavaScript File for responsive, interactive elements-->
+    <script src="Help.js"></script>
+    <script src="JavaScript_page.js"></script>
+    <script src="AJAX_DataLoad.js"></script>
+
+    <!--Includes the CSS library Bootstrap to help with structure (Styling done using personal CSS)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body style="background-color: #F4ECF7">
+
+    <ul id="navBar">
+        <li> <a href="HomePage.html"> Home </a> </li>
+        <li> <a href="P1_HTML.Html"> HTML </a> </li>
+        <li> <a href="P2_CSS.HTML"> CSS </a> </li>
+        <li> <a id="currentPage" href="P3_JavaScript.html"> JavaScript </a> </li>
+        <li> <a href="P4_Biography.html"> Author </a> </li>
+    </ul>
+
+    <div class="container" id="heading"> 
+
+        <header> JavaScript </header>
+
+    </div>
+
+    <div id="textParagraph" >
+
+        <div>
+            <h5 style="text-align: left;"> Purpose and Use </h5>
+
+            <!--Gives the faded line on top off the paragraph-->
+            <span class="fade-effect2"></span>
+
+            <p>
+                <img src="Dev_human.png" alt="Web Structure" id="floatRight">
+                JavaScript is a dynamic scripting/programming language designed to control the behaviour of different elements on a webpage. JavaScript is argued by many to be the most important programming language today and is by far the most popular language with just under 70% of developers employing it. JavaScript is used in web design for many reasons, with its primary use being the creation of responsive, interactive elements for web pages. It can be used to change and update HTML and CSS elements on a webpage dynamically. JavaScript can also be used to get and give data to and from sources across the web. Overall JavaScript has many uses in web development with its vast array of libraries and their functionality.
+            </p>
+
+            <!--On the click of this button the paragraph below will be filled (repeated clicks)-->
+            <button onclick="dynamicChange();">Click Here!</button>
+
+            <p id="fillText" class="state1" style="font-size: 120%; font-weight: bold;"></p>
+
+            <h4>JavaScript Web Development Uses</h4>
+            <ul style="list-style-type: circle; padding-bottom: 20px;">
+                <li>Web Pages</li>
+                <li>User Interfaces (React)</li>
+                <li>Interactive and Responsive Elements</li>
+                <li>Asynchronous/Dynamic Data Loading (AJAX)</li>
+                <li>Dynamic Web Applications (AngularJS)</li>
+                <li>Server Applications</li>
+                <li>Web Based Games</li>
+            </ul>
+            
+        </div>
+
+
+        <div>
+            <h5 style="text-align: left;"> History and Evolution </h5>
+
+            <span class="fade-effect2"></span>
+
+            <p>
+                Like CSS, JavaScript was created shortly after HTML in the mid 90's by Brendan Eich while he worked at Netscape. Originally created as LiveScript the language was established with the  purpose of utilizing it both in the browser and on the server. The language became more widely used in late 1995 as Microsoft attempted to reverse-engineer it for their new browser (Internet Explorer) in their browser war against Netscape. In 1997 ECMA (European Computer Manufacturers Association) took over the job of creating language specifications for JavaScript due to its rapid growth, this led to the creation of ECMAScript a scripting language specification used to standardise JavaScript. Through the early 2000's client side scripting was stagnant, with very little progress in the field. That was till 2005 which proved to be big for JavaScript with the introduction of AJAX which greatly improved user experience. JavaScript has grown exponentially since its rocky start to become the most popular programming language today.
+
+
+            </p>
+
+        </div>
+
+            <h5 style="text-align: left;"> AJAX </h5>
+
+            <span class="fade-effect2"></span>
+
+            <p>
+                AJAX (Asynchronous JavaScript and XML) is a set of web development techniques used to read data from and send data to web servers asynchronously (parallel to the browser running). AJAX is really powerful as it allows a browser to be changed and adapted without being refreshed. Below is an example of AJAX being used to asynchronously gather data from a website store the data as a JSON file format and display certain attributes of this data.
+            </p>
+
+            <!--Loads the data using AJAX as the button is pressed-->
+            <button onclick="loadData();">Click Here!</button>
+
+            <!--The data is added to the elements in this div-->
+            <div id="covid">
+                
+                <!--presents the total data worldwide-->
+                <p style="position: relative; float: right; padding-right: 100px">
+                    <ins>Total Cases</ins> : 
+                    <span id="cases" style="font-weight: bold;"></span>
+                    <ins>Total Deaths</ins> : 
+                    <span id="deaths" style="font-weight: bold;"></span>
+                </p>
+
+                <table>
+
+                    <!--Where the title for the table is loaded by the function-->
+                    <caption style="font-weight: bold; text-align: center; color: red;"></caption>
+
+                    <!--Ensures the backgroud colour of the titles is unchanges by the row colouring-->
+                    <!--The table is iterated through with the data being added-->
+                    <tr style="background-color: #F4ECF7;">
+                        <th></th> <th></th>
+                    </tr>
+                    <tr> <td></td> <td></td> </tr>
+
+                    <tr> <td></td> <td></td> </tr>
+
+                    <tr> <td></td> <td></td> </tr>
+
+                    <tr> <td></td> <td></td> </tr>
+
+                    <tr> <td></td> <td></td> </tr>
+                    
+                    <tr> <td></td> <td></td> </tr>
+
+                    <tr> <td></td> <td></td> </tr>
+
+                    <tr> <td></td> <td></td> </tr>
+                </table>
+            </div>
+
+            <div style="padding-top: 20px;">
+
+                <h5 style="text-align: left;"> Forms </h5>
+    
+                <span class="fade-effect2"></span>
+    
+                <p style="padding-bottom: 50px;">
+                    Another important use for JavaScript is Form validation. Forms are a crucial part of HTML as they allow user information to be processed through the web page, this opens new doors for user accounts and comment. Forms come in many styles and gather user information and form validation can ensure that this information being submitted is of the correct format. Below is a Form that you can fill out and send to test JavaScript's form validation (please note none of this information is gathered).
+                </p>
+    
+                <!--Form div with all the elements needed for the div-->
+                <div id="form">
+
+                    <!--onsubmit it is validated using a JS function-->
+                    <form name="example" onsubmit="return validateForm()">
+
+                        <!--Text box for the users firstname-->
+                        <div style="float:left;">
+                            <label for="firstname">First Name: </label>
+                            <br>
+                            <input name="fName" id="firstname" size="20" type="text" maxlength="25"/>
+                        </div>
+                        
+                        <!--Text box for the users lastname-->
+                        <div style="float:left; padding-left: 50px;">
+                            <label for="lastname">Last Name: </label>
+                            <br>
+                            <input name="lName" id="lastname" size="20" type="text" maxlength="25"/>
+                        </div>
+
+                        <!--Text box for the users phone number-->
+                        <div style="float:left; padding-left: 50px;">
+                            <label for="number">Phone:</label>
+                            <br>
+                            <input name="phone" id="number" size="15" type="text" maxlength="10"/>
+                        </div>
+
+                        <!--Ensures the next element is on a new line-->
+                        <div class="clear">&nbsp;</div><br><br>
+
+                        <!--RadioButtons for gender-->
+                        <div style="float:left; padding-top: 10px;">
+                            <label>Gender</label> <br>
+
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male   </label>
+
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female   </label>
+
+                            <input type="radio" id="other" name="gender" value="other">
+                            <label for="other">Other   </label>
+                        </div>
+
+
+                        <div class="clear">&nbsp;</div> <br>
+                        
+                        <div style="float: right; padding-right: 5px;">
+                            <input type="submit" value="Submit">
+                        </div>
+
+                      </form>
+                </div>
+
+            </div>
+
+        <div>
+
+        </div>
+
+    </div>
+    
+    <div id="Buttons">
+        
+        <a id="Previous" href="P2_CSS.html"> &#8249; </a>
+
+        <a id="Next" href="P4_Biography.html"> &#8250; </a>
+    
+    </div>
+
+    <div id="helpButton">
+        <a href="#" onclick="helpJavaScript();"> Help ?</a>
+    </div>
+
+    <p id="helpInactive" onclick="helpClick();"></p>
+
+</body>
+
+
+</html>

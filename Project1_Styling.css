@@ -1,0 +1,310 @@
+/* 
+navBar: font-family: 'Gotu', sans-serif;
+pageHeading: font-family: 'Lora', serif;
+paragraph: font-family: 'Raleway', sans-serif;
+*/
+
+
+
+/*Styles the nav bar used on the home screen */
+#homeBar {
+    position: relative;
+    overflow-x: hidden;
+
+    width:640px; 
+    margin:0 auto;
+    top: 70px;
+
+    right: 14px;
+}
+#homeBar li {
+    list-style-type: none;
+    width: 150px;
+
+    text-align: center;
+    float: left;
+
+    font-family: 'Gotu', sans-serif;
+}
+#homeBar li  a {
+    text-decoration: none;
+    color: white;
+    display: block;
+
+    padding: 10px 30px 10px 30px;
+
+    border-style: solid;
+    border-color: #FEF9E7;
+    border-width: 3px;
+
+
+    background-color: #76D7C4;
+    margin-bottom: 2px;
+    border-radius: 12px;
+
+    transition-duration: 0.5s;
+}
+
+#homeBar li a:hover {
+    background-color: #AF7AC5;
+}
+
+#homeBar li a:active {
+    background-color: #9B59B6;
+}
+
+
+
+
+
+/* Styling for the navbar for the rest of the websites */
+#navBar {
+    list-style-type: none;
+    background-color: #D7BDE2;
+    width: 100%;
+
+    margin: 0px;
+    padding: 0px;
+    
+    overflow: hidden;
+    position: relative;
+    top: 0;
+}
+
+/* Ensures the Nav bar stays on the left */
+#navBar li {
+    float: left;
+    font-family: 'Gotu', sans-serif;
+    font-size: 130%;
+}
+
+/* Below changes styling for each link */
+#navBar li a {
+    
+    padding: 10px 30px 10px 30px;
+
+    color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+
+    transition-duration: 0.5s;
+}
+
+/* Changes the color when the page is active */
+#currentPage {
+    background-color: #76D7C4;
+}
+
+/* Changes the color when the tab is hovered over */
+#navBar li a:hover {
+    background-color: #AF7AC5;
+}
+
+#navBar li a:active {
+    background-color: #9B59B6;
+}
+
+
+
+
+
+/* USED FOR CHANGING THE TEXTS OF ALL THE PAGES */
+#heading {
+    position: relative; 
+    text-align: center;
+    top: 40px;
+    font-family: 'Lora', serif;
+    font-size: 400%;
+}
+
+#textParagraph {
+    width: 970px;
+    position: relative;
+    top: 50px;
+    margin: auto;
+
+}
+
+#textParagraph h5 {
+    font-size: 120%;
+    font-family: 'Lora', serif;
+    font-weight: 900;
+
+    padding-left: 10px;
+}
+
+#textParagraph p {
+    font-family: 'Raleway', sans-serif;
+
+    padding-top: 7px;
+    padding-bottom: 20px;
+}
+
+
+
+
+/*Used in the CSS page to demonstrate the cascading effect (external css) */
+.changedExternal {
+    font-size: 140%;
+    background-color: #FADBD8;
+    color: #117864;
+}
+
+
+
+
+
+
+/*changes the  border so it is thick around the whole element */
+/*look at JS files for change of id function */
+#mouseoverElement {
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+        
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: red;
+
+    padding: 0px;
+    color: black;
+}
+
+
+
+
+
+
+
+/* Makes the links to on page elements visible for the user (JS Function links) */
+.example {
+    text-decoration: none;
+    font-weight: bold;
+
+    color: black;
+}
+
+.example:hover {
+    text-decoration: none;
+    color: red;
+}
+
+/* Styles the content box for th above links */
+#boxActive {
+    position: fixed;
+
+    width: 35%;
+    left: 30%;
+    top: 50%;
+
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gotu', sans-serif;
+
+    background-color: yellow;
+
+    color: black;
+    border-radius: 12px;
+
+    padding: 10px 20px 10px 20px;
+}
+
+
+
+
+
+
+/* Used to style buttons for the next and previous pages */
+#Buttons a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+
+    padding: 8px 16px;
+    border-radius: 50%;
+
+    color: #FFFFFF;
+    background-color: #D7BDE2;
+
+    transition-duration: 0.5s;
+}
+
+#Buttons a:hover {
+    background-color: #AF7AC5;
+}
+
+#Buttons a:active {
+    background-color: #9B59B6;
+}
+
+#Buttons {
+    text-align: center;
+}
+
+#Next {
+    position: relative;
+    top: 100px;
+}
+
+#Previous {
+    position: relative;
+    top: 100px;
+}
+
+/* Adds some whitspace to the bottom of the page for the buttons to be more accessible */
+body {
+    padding-bottom: 180px;
+}
+
+
+
+
+
+/* Fixes the help button to the right corner for when user needs it */
+#helpButton a {
+    position: fixed;
+
+    bottom: 40px;
+    right: 40px;
+
+
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gotu', sans-serif;
+
+    background-color: #F1948A; 
+    color: black;
+    border-radius: 12px;
+
+    padding: 10px 20px 10px 20px;
+
+    transition-duration: 0.5s;
+}
+  
+#helpButton a:hover {
+    background-color: red;
+    color: black;  
+}
+
+/* Style of the help message box when activated */
+#helpActive {
+    position: fixed;
+
+    width: 50%;
+    left: 25%;
+    top: 40%;
+
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Gotu', sans-serif;
+    font-weight: bold;
+
+    background-color: red;
+
+    color: black;
+    border-radius: 4px;
+
+    padding: 50px 70px 50px 70px;
+}

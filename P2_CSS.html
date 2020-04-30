@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <style>
+        /* Used for the fading line above the paragraphs */
+        .fade-effect2 {
+            display:block;
+            border:none;
+            height:2px;
+            background: -webkit-gradient(radial, 1% 1%, 0, 50% 50%, 200, from(#5499C7), to(#EBF5FB));
+        }
+
+        /*used for image floats to the right of the paragraph */
+        #floatRight {
+            float: right;
+            padding: 0px 30px 20px 30px;
+            width: 230px;
+        }
+
+        /* Style the buttons used to demonstrate cascading */
+        button {
+            text-align: center;
+            background-color: #B2BABB;
+            border-radius: 7px;
+            padding: 5px 10px 5px 10px;
+        }
+
+        button:hover {
+            background-color: #E59866;
+        }
+
+        button:active {
+            background-color: #DC7633;
+            border-radius: 7px;
+        }
+
+        #buttons {
+            text-align: center;
+        }
+
+        /*styles the hierarchy in the paragraph */
+        section {
+            position: relative;
+            text-align: center; 
+            font-weight: bold; 
+            color: hotpink; 
+            top: -10px;
+        }
+    
+        /*centers the list  along y-axis*/
+        ol {
+            position: relative;
+            top: -12px;
+        }
+
+    </style>
+
+    <!--This style tag is used to demonstrate Document level styling-->
+    <style>
+    </style>
+
+    <title> Project 1 </title>
+
+    <!--Includes Fonts used for the whole website-->
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lora:wght@700&family=Raleway:wght@500&display=swap" rel="stylesheet">
+    
+    <!--Includes CSS File for styling at External Level-->
+    <link rel="stylesheet" type="text/css" href="Project1_Styling.css">
+
+    <!--Includes JavaScript File for responsive, interactive elements-->
+    <script src="Help.js"></script>
+    <script src="CSS_page.js"></script>
+
+    <!--Includes the CSS library Bootstrap to help with structure (Styling done using personal CSS)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body style="background-color: #EBF5FB">
+
+    <ul id="navBar">
+        <li> <a href="HomePage.html"> Home </a> </li>
+        <li> <a href="P1_HTML.Html"> HTML </a> </li>
+        <li> <a id="currentPage" href="P2_CSS.HTML"> CSS </a> </li>
+        <li> <a href="P3_JavaScript.html"> JavaScript </a> </li>
+        <li> <a href="P4_Biography.html"> Author </a> </li>
+    </ul>
+
+    <div class="container" id="heading"> 
+
+        <header> CSS </header>
+
+    </div>
+
+
+    <div id="textParagraph">
+        
+        <div>
+            <h5 style="text-align: left;"> Purpose </h5>
+
+            <!--Gives the faded line on top off the paragraph-->
+            <span class="fade-effect2"></span>
+
+            <p>
+                Cascading Style Sheets (CSS) is a style sheet language used to alter the characteristics of a web page. CSS describes the presentation of web pages and how each element is portrayed by the web page, this includes the colour, layout, size, font attributes (size, colour, weight) of elements on any given website. Although CSS and HTML work in cohesion, CSS is independent of the structural programming language. CSS also allows for different styles according to the device being used. Overall CSS is a very simple but very effective language which does its job with reliability.
+            </p>
+        
+        </div>
+
+
+        <div>
+            <h5 style="text-align: left;"> Brief History </h5>
+
+            <!--Gives the faded line on top off the paragraph-->
+            <span class="fade-effect2"></span>
+
+            <p> 
+                <img src="Lie.jpg" alt="Dr Hakon Wium Lie" id="floatRight">
+                CSS was first proposed by Hakon Wium Lie in 1994, Dr Lie proposed CSS as a web styling language to solve the problems of HTML4 while working with the creator of HTML Sir Tim Berners-Lee. Although there were other stying languages proposed to fix the problems of HTML4 in the end CSS was chosen due to its simplicity and effectiveness 
+            </p>
+
+        </div>
+
+        <div>
+            <h5 style="text-align: left;"> Cascading </h5>
+
+            <span class="fade-effect2"></span>
+
+            <div id="change">
+                <p>
+                    The "Cascading" part of CSS means that the styles applied to a web page can fall from one sheet to another, as a result one HTML document can have many style sheets. There are three levels of application for CSS.
+                </p>
+                    <!--Ordered list with the three cascading levels-->
+                    <ol>
+                        <li> 
+                            Inline 
+                            <span class="glyphicon glyphicon-arrow-right"></span> 
+                            Style applied to specific element written within that element.
+                        </li>
+                        <li> 
+                            Document Level <span class="glyphicon glyphicon-arrow-right"></span>
+                            Included within the style tag in the HTML document.
+                        </li>
+                        <li> 
+                            External <span class="glyphicon glyphicon-arrow-right"></span>
+                            Written into a separate style sheet, referenced in the HTML document.
+                        </li>
+                    </ol>
+                <p>
+                    Many styles can be applied to an element, the style that will effect the elements attributes is determined by which level it is written in. 
+                </p>
+
+                <section>
+                    <h4> Inline > Document Level > External </h4>   
+                </section>
+                <p>
+                    Each level has its benefits (which will be discussed later). Below is an example of how the cascading in CSS works. This will demonstrate the hierarchy of styling shown above. Try different variations of the buttons to see which styles get overwritten.
+                </p>
+                
+            </div>
+
+            <div id="buttons">
+                <!--button used to demonstrate the cascading side of css-->
+                <!--Look at JS file for refrence-->
+                <button onclick="inLineClick();"> Inline </button> 
+                <button onclick="documentClick();"> Document Level </button>
+                <button onclick="externalClick();"> External </button>
+                <!-- Refreshes the page so that its can be attempted again-->
+                <button onClick="window.location.reload();" style="background-color: lawngreen;"> Reset </button>
+            </div>
+        </div>
+
+        <div>
+            <h5 style="text-align: left;"> Separation </h5>
+
+            <span class="fade-effect2"></span>
+
+            <p>
+                After understanding the three cascading levels we now know how styles are applied to a HTML document. But the real question is when and why do you apply styles at a specific level?  We can start with External Styling. 
+                <!--Each button used for bringing up the text box-->
+                <a href="#" onclick="clickExternal();" class="example">
+                    External style sheets 
+                </a> 
+                have many benefits but the main reason we use them is to keep consistency within a website as External style sheet apply to any webpage they are "linked" to. This also means that all the pages linked to the style sheet can be adjusted by altering the CSS file, which is incredibly powerful. 
+                <a href="#" onclick="clickInternal();" class="example">
+                    Internal style sheets 
+                </a> 
+                are more focussed in their approach and as a result are used for more targeted styling. Internal style sheets are used for groups of elements that require independent styling on each page of a website.
+                <a href="#" onclick="clickInternal();" class="example">
+                    Inline styles 
+                </a> 
+                are used exclusively to apply unique styles to individual elements on a website. This includes overriding Internal or External styles to ensure an element fits correctly.
+
+            </p>
+        
+        </div>
+
+    </div>
+
+    <!--Text Box to be filled from the JS code-->
+    <p id="boxInactive" onclick="bodyClick();"></p>
+    
+    <!--Buttons for next and previous-->
+    <div id="Buttons">
+        
+        <a id="Previous" href="P1_HTML.html"> &#8249; </a>
+
+        <a id="Next" href="P3_JavaScript.html"> &#8250; </a>
+    
+    </div>
+
+    <div id="helpButton">
+        <a href="#" onclick="helpCSS();"> Help ?</a>
+    </div>
+
+    <p id="helpInactive" onclick="helpClick();"></p>
+</body>
+
+
+</html>

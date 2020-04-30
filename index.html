@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8"/>
+
+    <style>
+
+        /*places image in the center of the page and adjusts size */
+        img {
+            position: relative;
+            top: 80px;
+
+            width: 540px;
+            overflow: hidden;
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Styles the message at the bottom of the page to stand out (important) */
+        #message {
+            position: relative;
+            overflow-x: hidden;
+
+            width:500px; 
+            margin:0 auto;
+            top: 150px;
+            
+            font-weight: bold;
+            font-family: 'Raleway', sans-serif;
+            font-size: 90%;
+            
+            background-color: red; 
+            color: white;
+
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+
+    <title> Project 1 </title>
+    
+    <!--Includes Fonts used for the whole website-->
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lora:wght@700&family=Raleway&display=swap" rel="stylesheet">
+
+    <!--Includes CSS File for styling at External Level-->
+    <link rel="stylesheet" type="text/css" href="Project1_Styling.css">
+
+    <!--Includes JavaScript File for responsive, interactive elements-->
+    <script src="Help.js"></script>
+
+    <!--Includes the CSS library Bootstrap to help with structure (Styling done using personal CSS)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+
+<body style="background-color: #FEF9E7">
+    <!--PLEASE TOGGLE WORD-WRAP TO VIEW EACH DOCUMENT EASIER AS THE TEXT IS ALL ON ONE LINE.-->
+    <div id="homeBody">
+
+        <!--Introduces the website with a heading and subheading-->
+        <div id="heading">
+            <h1 style="font-size: 95%;">
+                <b>Welcome</b>
+            </h1>
+
+            <h2 style="font-size: 35%; font-family: 'Raleway', sans-serif;">
+                This Website is a description and application of the basics of web development 
+                <br>using HTML, CSS and JavaScript. Enjoy!
+            </h2>
+        </div>
+
+        <!--Nav bar on home page-->
+        <ul id="homeBar">
+            <li> 
+                <a href="P1_HTML.html"> HTML </a> 
+            </li>
+            <li> 
+                <a href="P2_CSS.html"> CSS </a> 
+            </li>
+            <li> 
+                <a href="P3_JavaScript.html"> JavaScript </a> 
+            </li>
+            <li> 
+                <a href="P4_Biography.html"> Author </a> 
+            </li>
+        </ul>
+
+        <div>
+            <img src="web_dev.png" alt="Web development brainstorm">
+        </div>
+
+        <!--Alert message to check out the help box-->
+        <div id="message">
+            <p style="text-align: center; font-size: 200%;">
+                <span class="glyphicon glyphicon-warning-sign"></span>
+            </p>
+            <p style="text-align: center;">
+                Please be sure to understand the interactive elements on each page by clicking 
+                the help button on the bottom right corner!
+            </p>
+        </div>
+
+    </div>
+
+    <!--Help Button on the bottom corner-->
+    <div id="helpButton">
+        <a href="#" onclick="helpHome();"> Help ?</a>
+    </div>
+
+    <!--Text box which will be filled with help message on click (invisible/empty when not clicked-->
+    <p id="helpInactive" onclick="helpClick();"></p>
+
+</body>
+
+
+</html>
